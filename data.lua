@@ -1,0 +1,6 @@
+require("prototypes.item")
+require("prototypes.recipes")
+require("prototypes.technology")
+require("prototypes.item-groups")
+require("prototypes.entities")
+require("prototypes.recipe-category")

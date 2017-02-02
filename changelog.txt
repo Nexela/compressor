@@ -1,0 +1,58 @@
+0.2.0
+redid tech tree again, broke up groups and started rebalancing costs
+changed a few icons to represent updated pics
+added 5 new items, more chests and inserters including both types of stack inserters.
+tech tree now makes a little more sense.
+compressed some code to make it take up less space.
+finished tech tree, balance is something probably needed but don't have time for.
+All default recipes now attatched to a research and all researches have a cost.
+Working on making dynamic recipes, if takes to long they will be  in the next update if not then they will be included in this one.
+multiplayer is supported, has been for a while, i just forgot to include that in description.
+
+0.1.9 = added few missing recipes
+alien artifacts
+added actual cost to using reasearches
+added a few new icons made by Chrsef
+
+0.1.8 = redid entire techtree. 
+Added around 25 new researches.
+Added pictures for researches.
+worked on rebalancing costs of researches. (not finished)
+added new document with a list of where everything is located in the researches.
+started working on support for other mods
+
+0.1.7 = updated mod to .14. 
+Added compressor and decompressor as entities, moved recipes over to use the new assembling machines. 
+Working on technologies now that old crafting issues have been solved.
+
+0.1.6 = updated the mod to .13, 
+disabled a few recipes that use items that do not exist anymore, have not added recipes for totally new items yet. 
+Technologies are still diabled and working on making entities for next update.
+
+0.1.5= fixed issue where new games had certain materials missing. 
+added many materials and 42 new items, and around 80 recipes. 
+Disables technologies and put power requirements on crafting of items temporarily until other fixes can be implimented, disabled technologies.
+
+0.1.4= fixed autocrafting issues by making two new science groups, 
+one which has recipes with little impact to the autocrafting, and one with big changes to the autocrafting.
+
+0.1.3= Added Solid fuel compression. 
+Did some compressing inside the code to make it take less space. 
+Fixed issue with electromics not autocrafting. 
+Added 30 items and turned off technologies temporarily.
+All recipes are unlocked by default except WIP items.
+
+0.1.2 = Added 13 new items and 26 recipes. 
+Found autocrafting bug where autocrafting won't make electronic circuits. 
+Added names for new items, added description for technologies. 
+Added two new researches and made all crafting recipes unlockable. 
+Compressor and uncompressor are still WIP as the original idea for them did not work. 
+Icons made for future planned items just not implimented fully yet. 
+Also, next update will be more about research hopefully. 
+But i might also add all of the belts. (currently only yellow are supported)
+
+0.1.1 = Added; compressor, and uncompressor, two tabs, one for compression and one for uncompression. 
+Also added two technologies. 
+Also added names for everything except one or two recipes
+
+0.1.0 = first draft, only four recipes with little to no additional features.

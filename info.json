@@ -1,0 +1,11 @@
+{
+"name": "compressor",
+"version": "0.1.9",
+"factorio_version": "0.14",
+"title": "Compressed Materials",
+"author": "theradman221",
+"contact": "theradman221@gmail.com",
+"homepage": "https://forums.factorio.com/viewtopic.php?f=97&t=20891",
+"description": "Using this mod you can hold massive amounts of items by compressing them!",
+"dependencies": ["base >= 0.14.0"]
+}
