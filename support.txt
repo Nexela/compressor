@@ -1,2 +1,2 @@
-mods supported currently
-none
+Mods supported:
+All

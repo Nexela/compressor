@@ -1,7 +1,9 @@
 -------------------------------------------------------------------------------
 --[[Create Technologies]]--
 -------------------------------------------------------------------------------
+--local tech_cat = {ores=1, items=2, tiles=3, ammo=4, entities=5, modules=6, equipment=7}
 local tech1 = {
+    --ores
     type = "technology",
     name = "compression-1",
     icon = "__compressor__/graphics/compress-tech.png",
@@ -22,6 +24,7 @@ local tech1 = {
 }
 
 local tech2 = {
+    --items
     type = "technology",
     name = "compression-2",
     icon = "__compressor__/graphics/compress-tech.png",
@@ -42,6 +45,7 @@ local tech2 = {
 }
 
 local tech3 = {
+    --tiles
     type = "technology",
     name = "compression-3",
     icon = "__compressor__/graphics/compress-tech.png",
@@ -49,7 +53,7 @@ local tech3 = {
     order = "z",
     effects = {},
     upgrade = true,
-    prerequisites = {"automation-2", "compression-2"},
+    prerequisites = {"landfill", "compression-2"},
     unit =
     {
         count = 50,
@@ -62,6 +66,7 @@ local tech3 = {
 }
 
 local tech4 = {
+    --ammo
     type = "technology",
     name = "compression-4",
     icon = "__compressor__/graphics/compress-tech.png",
@@ -69,7 +74,7 @@ local tech4 = {
     order = "z",
     effects = {},
     upgrade = true,
-    prerequisites = {"logistics-3", "compression-3"},
+    prerequisites = {"military-2", "compression-3"},
     unit =
     {
         count = 50,
@@ -82,6 +87,7 @@ local tech4 = {
 }
 
 local tech5 = {
+    --entities
     type = "technology",
     name = "compression-5",
     icon = "__compressor__/graphics/compress-tech.png",
@@ -89,7 +95,7 @@ local tech5 = {
     order = "z",
     effects = {},
     upgrade = true,
-    prerequisites = {"armor-making-2", "compression-4"},
+    prerequisites = {"logistics-3", "compression-4"},
     unit =
     {
         count = 50,
@@ -101,4 +107,46 @@ local tech5 = {
     }
 }
 
-data:extend({tech1, tech2, tech3, tech4, tech5})
+local tech6 = {
+    --modules
+    type = "technology",
+    name = "compression-6",
+    icon = "__compressor__/graphics/compress-tech.png",
+    icon_size = 128,
+    order = "z",
+    effects = {},
+    upgrade = true,
+    prerequisites = {"modules", "compression-5"},
+    unit =
+    {
+        count = 50,
+        ingredients =
+        {
+            {"science-pack-1",1},
+        },
+        time = 20
+    }
+}
+
+local tech7 = {
+    --equipment
+    type = "technology",
+    name = "compression-7",
+    icon = "__compressor__/graphics/compress-tech.png",
+    icon_size = 128,
+    order = "z",
+    effects = {},
+    upgrade = true,
+    prerequisites = {"armor-making-2", "compression-6"},
+    unit =
+    {
+        count = 50,
+        ingredients =
+        {
+            {"science-pack-1",1},
+        },
+        time = 20
+    }
+}
+
+data:extend({tech1, tech2, tech3, tech4, tech5, tech6, tech7})

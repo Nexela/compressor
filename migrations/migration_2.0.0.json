@@ -1,10 +1,31 @@
 {
   "item":
   [
+    ["compressor", "auto-compressor"],
+    ["uncompressor", "auto-compressor"],
+    ["auto-decompressor", "auto-compressor"],
     ["compressed-iron", "compressed-iron-plate"],
     ["compressed-copper", "compressed-copper-plate"],
     ["compressed-steel", "compressed-steel-plate"],
     ["compressed-circuit1", "compressed-electronic-circuit"],
-    ["compressed-logs", "compressed-raw-wood"]
+    ["compressed-logs", "compressed-raw-wood"],
+    ["compressed-bullet1", "compressed-firearm-magazine"],
+    ["compressed-piercing-bullet-magazine", "compressed-piercing-rounds-magazine"],
+    ["compressed-circuit2", "compressed-advanced-circuit"],
+    ["compressed-express-transport-belt-to-ground", "compressed-express-underground-belt"],
+    ["compressed-fast-transport-belt-to-ground", "compressed-fast-underground-belt"],
+    ["compressed-underground", "compressed-underground-belt"],
+    ["compressed-satellite", "satellite"],
+    ["compressed-belt1", "compressed-transport-belt"],
+    ["compressed-basic-accumulator", "compressed-accumulator"],
+    ["compressed-basic-mining-drill", "compressed-electric-mining-drill"],
+    ["compressed-alien-science", "compressed-alien-science-pack"],
+    ["compressed-tank", "tank"]
+  ],
+  "entity":
+  [
+    ["auto-decompressor", "auto-compressor"],
+    ["compressor", "auto-compressor"],
+    ["uncompressor", "auto-compressor"]
   ]
 }
