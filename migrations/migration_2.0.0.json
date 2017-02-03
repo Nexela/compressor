@@ -1,0 +1,10 @@
+{
+  "item":
+  [
+    ["compressed-iron", "compressed-iron-plate"],
+    ["compressed-copper", "compressed-copper-plate"],
+    ["compressed-steel", "compressed-steel-plate"],
+    ["compressed-circuit1", "compressed-electronic-circuit"],
+    ["compressed-logs", "compressed-raw-wood"]
+  ]
+}
