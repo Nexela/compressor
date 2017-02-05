@@ -1,13 +1,15 @@
 0.2.0
-redid tech tree again, broke up groups and started rebalancing costs
-changed a few icons to represent updated pics
-added 5 new items, more chests and inserters including both types of stack inserters.
-tech tree now makes a little more sense.
-compressed some code to make it take up less space.
-finished tech tree, balance is something probably needed but don't have time for.
-All default recipes now attatched to a research and all researches have a cost.
-Working on making dynamic recipes, if takes to long they will be  in the next update if not then they will be included in this one.
-multiplayer is supported, has been for a while, i just forgot to include that in description.
+Nexela remade almost the entire mod from the ground up, now is dynamic in finding and adding recipes. 
+Only static thing is the auto-compressor which is a dynamic machine with graphics by Arch666Angel and actual animations. 
+All mods should have recipes dynamically generated for compression/decompression. 
+Now any assembling machine can make a compressed/decompressed recipe.
+auto-compressor is a lower level item that only uses compressor recipes can both compress and decompress.
+auto-compressor auto selects recipes and is about twice as fast as an assembling machine lvl.3 at compression recipes
+recipe cost in assembler based on how big original stack size is.
+New tech tree with 7 tech.
+totally new icons and research icons.
+GFX by Arch666Angel
+stack size is now 50 instead of 100.
 
 0.1.9 = added few missing recipes
 alien artifacts

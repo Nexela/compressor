@@ -13,7 +13,7 @@ end
 -------------------------------------------------------------------------------
 --Config variables
 local compressed_item_stack_size = 50 -- stack size for compressed items (not the items returned that is dynamic)
-local max_stack_size_to_compress = 500 -- Don't compress items over this stack size
+local max_stack_size_to_compress = 1000 -- Don't compress items over this stack size
 local speed_div = 4 --Recipe speed is stack_size/speed_div
 
 --Regular Variables
@@ -52,6 +52,18 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
                 loc_key = {"entity-name."..item.place_result}
             elseif item.placed_as_equipment_result then
                 loc_key = {"equipment-name."..item.placed_as_equipment_result}
+            end
+
+            --Build the icons table
+            local icons = {
+                {icon = "__compressor__/graphics/compress.png"}
+            }
+            if item.icons then
+                for _ , icon in pairs(item.icons) do
+                    icons[#icons+1] = icon
+                end
+            else
+                icons[#icons+1] = item.icon
             end
 
             --Get the techname to assign this too
@@ -102,10 +114,7 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
                 name = "uncompress-"..item.name,
                 localised_name = {"recipe-name.uncompress-item", loc_key},
                 localised_description = {"recipe-description.uncompress-item", loc_key},
-                icons = {
-                    {icon = "__compressor__/graphics/compress.png"},
-                    {icon = item.icon or item.icons[1].icon}
-                },
+                icons = icons,
                 category = "compression",
                 enabled = false,
                 ingredients = {
@@ -126,10 +135,7 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
                 localised_name = {"item-name.compressed-item", loc_key},
                 localised_description = {"item-description.compressed-item", loc_key},
                 flags = item.flags,
-                icons = {
-                    {icon = "__compressor__/graphics/compress.png"},
-                    {icon = item.icon or item.icons[1].icon}
-                },
+                icons = icons,
                 subgroup = "compressor-out-"..sub_group,
                 order = order,
                 stack_size = compressed_item_stack_size,

@@ -1,0 +1,75 @@
+outdated
+1 	science 1:coal copper ore iron ore wood stone
+4 	science 2:copper iron copper cable
+13	science 3:speed module
+10	science 4:splitter transport belt belt to ground
+11	science 5:fast splitter fast transport belt fast belt to ground
+12	science 6:express splitter express belt express belt to ground
+5 	science 8:science pack 1
+6 	science 9:science pack 2
+7 	science 10:science pack 3
+14	science 11:defender capsule
+27	science 12:rocket control unit rocket fuel rocket structure satelite
+30 	science 13:steel axe steel plate
+21	science 14:piercing bullet
+22	science 15:explosive cannon
+9 	science 16:solar panel accumulator
+26	science 17:active provider passive provider requester storage logistic robot construction robot robot frame roboport
+18	science 18:pipe pipe to ground
+23	science 19:rail chain signal rail signal rail train stop
+20	science 20:inserter
+15	science 21:shotgun shell basic bullet magazine grenade
+25	science 22:storage tank pumpjack
+24	science 23:chemical plant
+19	science 24:substation
+17	science 25:blue circuit
+16	science 26:electric furance
+8 	science 27:mining drill
+ science 28 science pack 4
+ science 29 stone brick
+ science 31 concrete
+ science 32 repair pack
+ science 33 speed module 2
+ science 34 speed module 3
+ science 35 effectivity module
+ science 36 effectivity module 2
+ science 37 effectivity module 3
+ science 38 productivity module
+ science 39 productivity module 2
+ science 40 productivity module 3
+ science 41 poison capsule
+ science 42 slowdown capsule
+ science 43 distractor capsule
+ science 44 destroyer capsule
+ science 45 laser turret
+ science 46 land mine
+ science 47 flame thrower ammo
+ science 48 piercing shotgun shell
+ science 49 explosives
+ science 50 cannon shell
+ science 51 rocket
+ science 52 explosive rocket
+ science 53 battery
+ science 54 steam engine
+ science 55 burner inserter
+ science 56 solid fuel
+ science 57 long handed inserter
+ science 58 fast inserter
+ science 59 filter inserter
+ science 60 stack inserter
+ science 61 stack filter inserter
+ science 62 sulfur
+ science 63 plastic bar
+ science 64 engine unit
+ science 65 electrical engine unit
+ science 66 small electric pole
+ science 67 medium electric pole
+ science 68 big electric pole
+ science 69 electronic circuit
+ science 70 red circuit
+science 71 stone furnace
+science 72 steel furnace
+science 73 alien artifacts
+science 74 wood chest
+science 75 iron chest
+science 76 steel chest
