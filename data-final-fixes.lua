@@ -20,7 +20,25 @@ local speed_div = 4 --Recipe speed is stack_size/speed_div
 local item_count = 0
 local compress_recipes, uncompress_recipes, compress_items = {}, {}, {}
 local tech_cat = {ores=1, items=2, tiles=3, ammo=4, entities=5, modules=6, equipment=7}
+
 local get_tech = function(tech) return "compression-"..tech_cat[tech] or 2 end
+
+local get_ore = function (name)
+    return name:find("^angels%-ore") or name:find("^angelsore") --or name:find("^ingot%-") or name:find("^processed%-")
+end
+
+local get_icons = function(item)
+    --Build the icons table
+    local icons = {{icon = "__compressor__/graphics/compress.png"}}
+    if item.icons then
+        for _ , icon in pairs(item.icons) do
+            icons[#icons+1] = icon
+        end
+    else
+        icons[#icons+1] = {icon = item.icon}
+    end
+    return icons
+end
 
 --Loop through all of these item categories
 for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", "capsule", "mining-tool", "tool"}) do
@@ -43,6 +61,7 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
             local sub_group = "items"
             local order = "compressed-"..item.type.."-"..item.name
             local techname = get_tech("items")
+            local icons = get_icons(item)
 
             --Try the best option to get a valid localised name
             local loc_key = {"item-name."..item.name}
@@ -54,20 +73,12 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
                 loc_key = {"equipment-name."..item.placed_as_equipment_result}
             end
 
-            --Build the icons table
-            local icons = {
-                {icon = "__compressor__/graphics/compress.png"}
-            }
-            if item.icons then
-                for _ , icon in pairs(item.icons) do
-                    icons[#icons+1] = icon
-                end
-            else
-                icons[#icons+1] = {icon = item.icon}
+            if group == "tools" or group == "mining-tools" or group == "repair-tool" then
+                techname = get_tech("items")
+                sub_group = "tools"
             end
-
             --Get the techname to assign this too
-            if item.type == "ammo" then
+            if item.type == "ammo" or group == "capsule" then
                 techname = get_tech("ammo")
                 sub_group = "ammo"
             elseif item.type =="module" then
@@ -76,11 +87,11 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
             elseif item.place_as_tile then
                 techname = get_tech("tiles")
                 sub_group = "tiles"
-            elseif data.raw["autoplace-control"][item.name] or item.name:find("^angels%-ore") or item.name:find("^angelsore")then
+            elseif data.raw["autoplace-control"][item.name] or get_ore(item.name) then
                 sub_group = "ores"
                 techname = get_tech("ores")
             elseif (item.name:find("%-barrel") or item.name:find("%-bottle") or item.name:find("%-canister")) then
-                sub_group = "items"
+                sub_group = "barrels"
                 techname = get_tech("items")
             elseif item.place_result then
                 techname = get_tech("entities")
@@ -147,7 +158,7 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
             compress_items[#compress_items+1] = new_item
 
             --Get the technology we want to use and add our recipes as unlocks
-            local technology = data.raw["technology"][techname]
+            local technology = data.raw["technology"][techname] or data.raw["technology"]["compression-1"]
             technology.effects[#technology.effects+1] = {type = "unlock-recipe", recipe = "uncompress-"..item.name}
             technology.effects[#technology.effects+1] = {type = "unlock-recipe", recipe = "compress-"..item.name}
         end

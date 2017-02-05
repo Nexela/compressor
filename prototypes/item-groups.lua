@@ -17,7 +17,8 @@ data:extend({compress_group, uncompress_group})
 -------------------------------------------------------------------------------
 --[[Create Sub-Groups]]--
 -------------------------------------------------------------------------------
-local cat = {compress="a", ores="b", items="c", tiles="d", ammo="e", entities="f", modules="g", equipment="h"}
+--"item", "ammo", "module", "rail-planner", "repair-tool", "capsule", "mining-tool", "tool"
+local cat = {compress="a", ores="b", items="c", tiles="d", ammo="e", entities="f", modules="g", equipment="h", barrels="cb", tools="ca"}
 for name, order in pairs(cat) do
     local cat_in = {
         type = "item-subgroup",

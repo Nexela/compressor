@@ -27,7 +27,7 @@ auto_compressor.crafting_categories = {"compression"}
 auto_compressor.minable = {mining_time = 5, result = "auto-compressor"}
 auto_compressor.allowed_effects = {"consumption", "speed", "pollution"}
 auto_compressor.crafting_speed = 3
-auto_compressor.energy_usage = "500kW"
+auto_compressor.energy_usage = "225kW"
 auto_compressor.animation =
     {
       filename = "__compressor__/graphics/auto-compressor-sheet.png",
