@@ -63,7 +63,7 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
                     icons[#icons+1] = icon
                 end
             else
-                icons[#icons+1] = item.icon
+                icons[#icons+1] = {icon = item.icon}
             end
 
             --Get the techname to assign this too
