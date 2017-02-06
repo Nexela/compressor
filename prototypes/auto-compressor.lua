@@ -15,7 +15,7 @@ local item = {
     flags = {"goes-to-quickbar"},
     place_result = "auto-compressor",
     stack_size = 50,
-    subgroup = "smelting-machine",
+    subgroup = "production-machine",
     order = "d[auto-compressor]",
 }
 
