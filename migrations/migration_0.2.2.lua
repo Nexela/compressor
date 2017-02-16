@@ -3,7 +3,7 @@ for _, force in pairs(game.forces) do
         if force.technologies["compression-"..i].researched then
             for _, effect in pairs(force.technologies["compression-"..i].effects) do
                 if effect.type == "unlock-recipe" then
-                    effect.recipe.enabled = true
+                    force.recipes[effect.recipe].enabled = true
                 end
             end
         end
