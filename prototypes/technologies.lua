@@ -81,7 +81,8 @@ local tech4 = {
         ingredients =
         {
             {"science-pack-1",1},
-			{"science-pack-2",1},
+            {"science-pack-2",1},
+            {"military-science-pack", 2}
         },
         time = 20
     }
@@ -103,7 +104,8 @@ local tech5 = {
         ingredients =
         {
             {"science-pack-1",1},
-			{"science-pack-2",1},
+            {"science-pack-2",1},
+            {"production-science-pack", 2}
         },
         time = 20
     }
@@ -125,8 +127,9 @@ local tech6 = {
         ingredients =
         {
             {"science-pack-1",1},
-			{"science-pack-2",1},
-			{"science-pack-3",1},
+            {"science-pack-2",1},
+            {"science-pack-3",1},
+            {"high-tech-science-pack", 2}
         },
         time = 20
     }
@@ -141,16 +144,17 @@ local tech7 = {
     order = "z",
     effects = {},
     upgrade = true,
-    prerequisites = {"armor-making-2", "compression-6"},
+    prerequisites = {"heavy-armor", "compression-6"},
     unit =
     {
         count = 400,
         ingredients =
         {
             {"science-pack-1",1},
-			{"science-pack-2",1},
-			{"science-pack-3",1},
-			{"alien-science-pack",1},
+            {"science-pack-2",1},
+            {"science-pack-3",1},
+            {"military-science-pack",1},
+            {"high-tech-science-pack", 1}
         },
         time = 20
     }

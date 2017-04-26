@@ -32,11 +32,18 @@ local get_icons = function(item)
     local icons = {{icon = "__compressor__/graphics/compress.png"}}
     if item.icons then
         for _ , icon in pairs(item.icons) do
-            icons[#icons+1] = icon
+            local shrink = util.table.deepcopy(icon)
+            shrink.scale = .75
+            icons[#icons+1] = shrink
         end
     else
-        icons[#icons+1] = {icon = item.icon}
+        icons[#icons+1] = {icon = item.icon, scale = .65}
     end
+    return icons
+end
+
+local uncompress_icons = function(icons)
+    icons[#icons+1] = {icon = "__compressor__/graphics/compress-out-arrow.png"}
     return icons
 end
 
@@ -125,7 +132,7 @@ for _, group in pairs({"item", "ammo", "module", "rail-planner", "repair-tool", 
                 name = "uncompress-"..item.name,
                 localised_name = {"recipe-name.uncompress-item", loc_key},
                 localised_description = {"recipe-description.uncompress-item", loc_key},
-                icons = icons,
+                icons = uncompress_icons(icons),
                 category = "compression",
                 enabled = false,
                 ingredients = {
